@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">c-beam for SmartWatch</string>
+    <string name="preference_activity_title">c-beam for SmartWatch Settings</string>
+    <string name="configuration_text">c-beam for SmartWatch Settings</string>
+
+    <string name="extension_name">c-beam</string>
+    <string name="source_name">c-beam</string>
+
+    <string name="notification_boarding_title">Now boarding</string>
+    <string name="notification_boarding_body_format">%2$s: %1$s</string>
+
+    <string name="notification_eta_title">ETA</string>
+    <string name="notification_eta_body_format">%2$s: %1$s (ETA: %3$s)</string>
+
+    <string name="preference_category_other">Other</string>
+    <string name="preference_option_email_developer_title">Email developer</string>
+
+    <string name="preference_option_clear">Clear all events</string>
+    <string name="preference_option_clear_txt">"All c-beam events on the watch will be cleared, continue?"</string>
+    <string name="clear_success">All events have been deleted</string>
+    <string name="clear_failure">Failed to delete events</string>
+
+    <string name="preference_status_error">Error</string>
+    <string name="preference_status_cbeam_not_installed">c-beam is not installed</string>
+    <string name="preference_status_cbeam_permission_error">Install c-beam first, then this extension</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="preference_key_email_developer">preference_key_email_developer</string>
+    <string name="preference_key_clear">preference_key_clear</string>
+    <string name="preference_key_error">preference_key_error</string>
+    <string name="developer_email_address">cketti@c-base.org</string>
+    <string name="developer_email_uri" formatted="false">cketti@c-base.org?subject=c-beam%20for%20SmartWatch</string>
+</resources>
