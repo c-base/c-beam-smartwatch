@@ -7,10 +7,10 @@
     <string name="extension_name">c-beam</string>
     <string name="source_name">c-beam</string>
 
-    <string name="notification_boarding_title">Now boarding</string>
+    <string name="notification_boarding_title_format">Now boarding (%s)</string>
     <string name="notification_boarding_body_format">%2$s: %1$s</string>
 
-    <string name="notification_eta_title">ETA</string>
+    <string name="notification_eta_title_format">ETA: %s</string>
     <string name="notification_eta_body_format">%2$s: %1$s (ETA: %3$s)</string>
 
     <string name="preference_category_other">Other</string>

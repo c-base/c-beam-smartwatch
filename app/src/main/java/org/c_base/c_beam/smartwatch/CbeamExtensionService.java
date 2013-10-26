@@ -63,7 +63,8 @@ public class CbeamExtensionService extends ExtensionService {
         long timestamp = intent.getLongExtra(CbeamHelper.IntentExtras.TIMESTAMP, 0);
         String time = formatTime(timestamp);
         String message = getString(R.string.notification_boarding_body_format, member, time);
-        createEvent(member, timestamp, R.string.notification_boarding_title, message);
+        String title = getString(R.string.notification_boarding_title_format, time);
+        createEvent(member, timestamp, title, message);
     }
 
     private void onEtaNotification(Intent intent) {
@@ -72,7 +73,8 @@ public class CbeamExtensionService extends ExtensionService {
         long timestamp = intent.getLongExtra(CbeamHelper.IntentExtras.TIMESTAMP, 0);
         String time = formatTime(timestamp);
         String message = getString(R.string.notification_eta_body_format, member, time, eta);
-        createEvent(member, timestamp, R.string.notification_eta_title, message);
+        String title = getString(R.string.notification_eta_title_format, eta);
+        createEvent(member, timestamp, title, message);
     }
 
     private String formatTime(long timestamp) {
@@ -80,7 +82,7 @@ public class CbeamExtensionService extends ExtensionService {
         return df.format(new Date(timestamp));
     }
 
-    private void createEvent(String member, long timestamp, int titleRes, String message) {
+    private void createEvent(String member, long timestamp, String title, String message) {
 
         long sourceId = NotificationUtil.getSourceId(this, EXTENSION_SPECIFIC_ID);
         if (sourceId == NotificationUtil.INVALID_ID) {
@@ -91,7 +93,7 @@ public class CbeamExtensionService extends ExtensionService {
         ContentValues eventValues = new ContentValues();
         eventValues.put(Notification.EventColumns.EVENT_READ_STATUS, false);
         eventValues.put(Notification.EventColumns.DISPLAY_NAME, member);
-        eventValues.put(Notification.EventColumns.TITLE, getString(titleRes));
+        eventValues.put(Notification.EventColumns.TITLE, title);
         eventValues.put(Notification.EventColumns.MESSAGE, message);
         eventValues.put(Notification.EventColumns.PERSONAL, 1);
         eventValues.put(Notification.EventColumns.PUBLISHED_TIME, timestamp);
